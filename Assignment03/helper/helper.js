@@ -13,7 +13,7 @@ export async function passwordHash(pwd) {
 
 export async function comparePassword(plainPassword, hashpassword) {
   try {
-    //** plain password === hashpassword*/
+   
     const isPassword = await bcrypt.compare(plainPassword, hashpassword);
     
     return isPassword;

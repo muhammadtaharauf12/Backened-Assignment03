@@ -9,15 +9,14 @@ import dns from "dns";
 dns.setServers(["1.1.1.1","8.8.8.8"]);
 
 
-// Connect to MongoDB
+
 connectDB();
 
 const app = express();
 
-// Middleware
+
 app.use(express.json());
 
-// Test Route
 app.get("/", (req, res) => {
     res.json({
         success: true,
