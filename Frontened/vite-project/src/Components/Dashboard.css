@@ -8,9 +8,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* ================================
-   Main Dashboard
-================================ */
+
 
 .dashboard-container {
   min-height: 100vh;
@@ -101,9 +99,7 @@
 }
 
 
-/* ================================
-   Profile Icon
-================================ */
+
 
 .dashboard-icon {
   width: 90px;
@@ -179,9 +175,7 @@
 }
 
 
-/* ================================
-   Information Cards
-================================ */
+
 
 .info-item {
   display: flex;

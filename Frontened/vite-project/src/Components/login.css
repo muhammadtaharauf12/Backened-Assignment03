@@ -1,4 +1,4 @@
-/* Google Font */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -8,9 +8,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* =========================
-   Background
-========================= */
+
 
 .login-container {
   min-height: 100vh;
@@ -25,9 +23,7 @@
   padding: 20px;
 }
 
-/* =========================
-   Glass Card
-========================= */
+
 
 .login-card {
   width: 100%;
@@ -51,9 +47,7 @@
   animation: fadeIn 0.8s ease;
 }
 
-/* =========================
-   Heading
-========================= */
+
 
 .login-card h2 {
   text-align: center;
@@ -76,9 +70,7 @@
   margin-bottom: 28px;
 }
 
-/* =========================
-   Input Group
-========================= */
+
 
 .input-group {
   margin-bottom: 20px;
@@ -95,9 +87,7 @@
   color: white;
 }
 
-/* =========================
-   Input
-========================= */
+
 
 .input-group input {
   width: 100%;
@@ -132,9 +122,7 @@
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
 }
 
-/* =========================
-   Login Button
-========================= */
+
 
 .login-btn {
   width: 100%;
