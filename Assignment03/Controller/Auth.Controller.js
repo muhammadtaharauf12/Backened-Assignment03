@@ -6,27 +6,35 @@ import jwt from "jsonwebtoken"
 
 export const SignupController = async (req, res) => {
     try {
-        let { email, password } = req.body
-        const getUser = await User.findOne({
-            email
-        })
-        if (getUser) return res.status(409).send("This email is allready exist")
+        const { firstName, fullName, email, password } = req.body;
 
-        if (email && password) {
-            let pwd = await passwordHash(password)
+        const getUser = await User.findOne({ email });
+
+        if (getUser) {
+            return res.status(409).send("This email already exists");
+        }
+
+        if (firstName && fullName && email && password) {
+
+            const pwd = await passwordHash(password);
 
             await User.insertOne({
-                email: email,
+                firstName,
+                fullName,
+                email,
                 password: pwd
-            })
-            return res.status(201).send("create user successfully")
-        } else {
-            res.status(400).send("Bad req")
-        }
-    } catch (error) {
+            });
 
+            return res.status(201).send("User created successfully");
+        } else {
+            return res.status(400).send("All fields are required");
+        }
+
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send("Internal Server Error");
     }
-}
+};
 
 
 export const LoginController = async (req, res) => {

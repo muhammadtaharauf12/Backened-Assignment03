@@ -1,0 +1,451 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================================
+   Main Dashboard
+================================ */
+
+.dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 20px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background decoration */
+
+.dashboard-container::before {
+  content: "";
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -100px;
+  left: -100px;
+
+  filter: blur(2px);
+}
+
+.dashboard-container::after {
+  content: "";
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  bottom: -150px;
+  right: -100px;
+}
+
+
+/* ================================
+   Dashboard Card
+================================ */
+
+.dashboard-card {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 45px 40px;
+
+  position: relative;
+  z-index: 2;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  text-align: center;
+
+  animation: dashboardAppear 0.7s ease;
+}
+
+
+/* ================================
+   Profile Icon
+================================ */
+
+.dashboard-icon {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+
+  font-size: 42px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+
+  transition: 0.3s ease;
+}
+
+.dashboard-icon:hover {
+  transform: scale(1.08) rotate(3deg);
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* ================================
+   Headings
+================================ */
+
+.dashboard-card h1 {
+  font-size: 32px;
+
+  font-weight: 700;
+
+  margin-bottom: 5px;
+
+  color: #ffffff;
+}
+
+.dashboard-card h2 {
+  font-size: 22px;
+
+  font-weight: 500;
+
+  margin-bottom: 28px;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ================================
+   User Details
+================================ */
+
+.user-details {
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* ================================
+   Information Cards
+================================ */
+
+.info-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 16px 18px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: all 0.3s ease;
+
+  text-align: left;
+}
+
+.info-item:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.info-item span {
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.info-item strong {
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: white;
+
+  text-align: right;
+}
+
+
+/* ================================
+   Alternative support for <p>
+   if Dashboard JSX uses p tags
+================================ */
+
+.user-info p {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 16px 18px;
+
+  margin: 0;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  text-align: left;
+
+  transition: 0.3s ease;
+}
+
+.user-info p:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.user-info p strong {
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.user-info p span {
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: white;
+
+  text-align: right;
+}
+
+
+/* ================================
+   Logout Button
+================================ */
+
+.logout-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 28px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color: #5a3fc0;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-3px);
+
+  background: #f7f7f7;
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.logout-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* ================================
+   Loading Screen
+================================ */
+
+.dashboard-loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  );
+
+  color: white;
+}
+
+.loading-box {
+  padding: 25px 35px;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  animation: pulse 1.5s infinite;
+}
+
+
+/* ================================
+   Animations
+================================ */
+
+@keyframes dashboardAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(40px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width: 600px) {
+
+  .dashboard-container {
+    padding: 20px 15px;
+  }
+
+  .dashboard-card {
+    padding: 35px 22px;
+
+    border-radius: 20px;
+  }
+
+  .dashboard-icon {
+    width: 75px;
+    height: 75px;
+
+    font-size: 34px;
+  }
+
+  .dashboard-card h1 {
+    font-size: 27px;
+  }
+
+  .dashboard-card h2 {
+    font-size: 19px;
+  }
+
+  .info-item,
+  .user-info p {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 6px;
+  }
+
+  .info-item strong,
+  .user-info p span {
+    text-align: left;
+  }
+
+  .logout-btn {
+    padding: 14px;
+  }
+}

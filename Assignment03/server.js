@@ -5,6 +5,7 @@ import { connectDB } from "./config/db.js";
 import { AuthRoutes  } from "./Routes/Auth.js";
 import { UsersRoutes } from "./Routes/Users.Router.js";
 import { authenticateToken } from "./middleware/auth.js";
+import cors from "cors";
 import dns from "dns";
 dns.setServers(["1.1.1.1","8.8.8.8"]);
 
@@ -13,6 +14,8 @@ dns.setServers(["1.1.1.1","8.8.8.8"]);
 connectDB();
 
 const app = express();
+
+app.use(cors());
 
 
 app.use(express.json());

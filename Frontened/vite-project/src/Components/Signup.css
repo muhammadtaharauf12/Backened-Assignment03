@@ -1,0 +1,237 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   Background
+========================= */
+
+.signup-container {
+  min-height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* =========================
+   Glass Card
+========================= */
+
+.signup-card {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 40px 35px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+  color: white;
+
+  animation: fadeIn 0.8s ease;
+}
+
+/* =========================
+   Heading
+========================= */
+
+.signup-card h2 {
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: white;
+
+  margin-bottom: 8px;
+}
+
+.signup-card > p {
+  text-align: center;
+
+  color: #e8e8e8;
+
+  font-size: 15px;
+
+  margin-bottom: 28px;
+}
+
+/* =========================
+   Input Group
+========================= */
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: white;
+}
+
+/* =========================
+   Input
+========================= */
+
+.input-group input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 2px solid transparent;
+  outline: none;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.input-group input:focus {
+  border-color: white;
+
+  background: rgba(255, 255, 255, 0.22);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   Signup Button
+========================= */
+
+.signup-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: white;
+
+  color: #5a3fc0;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  transform: translateY(-3px);
+
+  background: #f5f5f5;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.signup-btn:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   Login Text
+========================= */
+
+.login-text {
+  text-align: center;
+
+  margin-top: 22px;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+.login-text a {
+  color: white;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.login-text a:hover {
+  color: #ffe082;
+
+  text-decoration: underline;
+}
+
+/* =========================
+   Animation
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 30px 20px;
+  }
+
+  .signup-card h2 {
+    font-size: 26px;
+  }
+
+  .signup-btn {
+    font-size: 16px;
+  }
+}

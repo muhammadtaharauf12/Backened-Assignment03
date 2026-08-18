@@ -6,7 +6,7 @@ export const accessToken = async (payload) => {
         },
         process.env.JWT,
         {
-            expiresIn: '5m'
+            expiresIn: '30m'
         }
     );
 
